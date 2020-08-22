@@ -7,12 +7,12 @@
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
+			}
 		}
-	}
 	
 	dependencies {
 	        implementation 'com.github.sunny52525:htmlView:Tag'
-	}
+		}
 ## Example
     XML
     <ScrollView
@@ -26,18 +26,20 @@
     </ScrollView>
     
     
-    MainActivity
-        val html_text_view=findViewById(R.id.html_text_view)
+    -MainActivity
+     
+     	val html_text_view=findViewById(R.id.html_text_view)
           html_text_view.quoteSpanBackGroundColor = ContextCompat.getColor(this, R.color.Black)
-           html_text_view.quoteSpanGap = 30F
-        html_text_view.setTextColor(ContextCompat.getColor(this,     R.color.white))
-        html_text_view.setBackgroundColor(resources.getColor(R.color.Black))
-        html_text_view.quoteSpanStripColor = resources.getColor(R.color.blue)
-        html_text_view.setText(<h1>Hello World</h1>)
+          html_text_view.quoteSpanGap = 30F
+       	  html_text_view.setTextColor(ContextCompat.getColor(this,     R.color.white))
+          html_text_view.setBackgroundColor(resources.getColor(R.color.Black))
+          html_text_view.quoteSpanStripColor = resources.getColor(R.color.blue)
+          html_text_view.setText(<h1>Hello World</h1>)
 
 
-    # Image Click Listener
-        html_text_view.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
+    -Image Click Listener
+     
+     	html_text_view.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
             override fun imageClicked(url: String?) {
                 Log.d("TAG", "imageClicked: $url")
             }
