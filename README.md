@@ -56,4 +56,4 @@
     Contribution is welcomed,fork add features and make PR's.
 
 ### Authors
- - Just Me Right Now    [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/sunny52525.svg?style=social&label=Follow%20%40sunny52525)](https://twitter.com/cloudposse)
+ - Just Me Right Now    [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/sunny52525.svg?style=social&label=Follow%20%40sunny52525)](https://twitter.com/sunny52525)
