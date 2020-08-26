@@ -8,6 +8,7 @@ import android.text.style.QuoteSpan
 import android.text.style.URLSpan
 import android.util.AttributeSet
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 
 class htmlview @JvmOverloads constructor(
@@ -16,8 +17,8 @@ class htmlview @JvmOverloads constructor(
     defStyleAttr: Int = 0
 
 ) : androidx.appcompat.widget.AppCompatTextView(context!!, attrs, defStyleAttr) {
-    var quoteSpanBackGroundColor = resources.getColor(R.color.white)
-    var quoteSpanStripColor = resources.getColor(R.color.blue)
+    var quoteSpanBackGroundColor =ContextCompat.getColor(context!!,R.color.white)
+    var quoteSpanStripColor = ContextCompat.getColor(context!!,R.color.blue)
     var quoteSpanStripWidth = 10F
     var quoteSpanGap = 50F
     private var imageWidth=-1
@@ -30,13 +31,10 @@ class htmlview @JvmOverloads constructor(
     fun setText(html: String) {
         val imageGetter = HtmlImageGetter(resources, this,imageWidth,imageHeight,imageDrawableBoundLeft,imageDrawableBoundTop)
         val styledText = HtmlCompat.fromHtml(html, paintFlags, imageGetter, null)
-        val imageClick = ImageClick(styledText as Spannable)
-        val styledText2 = replaceQuoteSpans(styledText)
-
+        ImageClick(styledText as Spannable)
+        replaceQuoteSpans(styledText)
         this.movementMethod = LinkMovementMethod.getInstance()
         super.setText(styledText)
-
-
     }
 
     fun setImageDimensions(width:Int,Height:Int){

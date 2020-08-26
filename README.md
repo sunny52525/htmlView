@@ -15,7 +15,7 @@
 		}
 	
 	dependencies {
-	        implementation 'com.github.sunny52525:htmlView:Tag'
+	        implementation 'com.github.sunny52525:htmlView:0.1'
 		}
 ## Example
     XML
@@ -31,23 +31,45 @@
     
     
     -MainActivity
-     
-     	val html_text_view=findViewById(R.id.html_text_view)
+
+        Kotlin
+
+     	  val html_text_view=findViewById(R.id.html_text_view)
           html_text_view.quoteSpanBackGroundColor = ContextCompat.getColor(this, R.color.Black)
           html_text_view.quoteSpanGap = 30F
-       	  html_text_view.setTextColor(ContextCompat.getColor(this,     R.color.white))
-          html_text_view.setBackgroundColor(resources.getColor(R.color.Black))
-          html_text_view.quoteSpanStripColor = resources.getColor(R.color.blue)
+       	  html_text_view.setTextColor(ContextCompat.getColor(this,R.color.white))
+          html_text_view.setBackgroundColor(ContextCompat.getColor(this,R.color.Black))
+          html_text_view.quoteSpanStripColor = ContextCompat.getColor(this,R.color.Blue)
           html_text_view.setText(<h1>Hello World</h1>)
+
+        Java
+            htmlview html_text_view=findViewById(R.id.html);
+            html_text_view.setQuoteSpanBackGroundColor(ContextCompat.getColor(this,R.color.Black));
+            html_text_view.setQuoteSpanStripColor(ContextCompat.getColor(this,R.color.blue));
+            html_text_view.setQuoteSpanStripWidth(10F);
+            html_text_view.setQuoteSpanGap(30F);
+            html_text_view.setText(<h1>Hello World</h1>)
 
 
     -Image Click Listener
-     
-     	html_text_view.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
+
+        Kotlin
+
+     	    html_text_view.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
             override fun imageClicked(url: String?) {
                 Log.d("TAG", "imageClicked: $url")
-            }
-        })
+                }
+            })
+
+         Java
+
+            html_text_view.setOnViewTouchedListener(new htmlview.OnViewTouchedListener() {
+                        @Override
+                        public void imageClicked(String s) {
+                            Log.d("TAG", "imageClicked: Url is " +s);
+                        }
+                    });
+
 
 ## Sample App
 [Sample App](https://github.com/sunny52525/htmlView/tree/master/app)
@@ -58,4 +80,6 @@
     Contribution is welcomed,fork add features and make PR's.
 
 ### Authors
- - Just Me Right Now    [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/sunny52525.svg?style=social&label=Follow%20%40sunny52525)](https://twitter.com/sunny52525)
+ - Just Me Right Now
+
+## [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/sunny52525.svg?style=social&label=Follow%20%40sunny52525)](https://twitter.com/sunny52525)
