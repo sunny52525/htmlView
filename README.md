@@ -40,7 +40,7 @@
        	  html_text_view.setTextColor(ContextCompat.getColor(this,R.color.white))
           html_text_view.setBackgroundColor(ContextCompat.getColor(this,R.color.Black))
           html_text_view.quoteSpanStripColor = ContextCompat.getColor(this,R.color.Blue)
-          html_text_view.setText(<h1>Hello World</h1>)
+          html_text_view.setText("<h1>Hello World</h1>")
 
         Java
             htmlview html_text_view=findViewById(R.id.html);
@@ -48,7 +48,7 @@
             html_text_view.setQuoteSpanStripColor(ContextCompat.getColor(this,R.color.blue));
             html_text_view.setQuoteSpanStripWidth(10F);
             html_text_view.setQuoteSpanGap(30F);
-            html_text_view.setText(<h1>Hello World</h1>)
+            html_text_view.setText("<h1>Hello World</h1>");
 
 
     -Image Click Listener
