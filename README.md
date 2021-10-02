@@ -32,30 +32,22 @@
     
     -MainActivity
 
-        Kotlin
+       
+ 	 
+          binding.htmlTextView.quoteSpanBackGroundColor = ContextCompat.getColor(this, R.color.Black)
+          binding.htmlTextView.quoteSpanGap = 30F
+       	  binding.htmlTextView.setTextColor(ContextCompat.getColor(this,R.color.white))
+          binding.htmlTextView.setBackgroundColor(ContextCompat.getColor(this,R.color.Black))
+          binding.htmlTextView.quoteSpanStripColor = ContextCompat.getColor(this,R.color.Blue)
+          binding.htmlTextView.setText("<h1>Hello World</h1>")
 
-     	  val html_text_view=findViewById(R.id.html_text_view)
-          html_text_view.quoteSpanBackGroundColor = ContextCompat.getColor(this, R.color.Black)
-          html_text_view.quoteSpanGap = 30F
-       	  html_text_view.setTextColor(ContextCompat.getColor(this,R.color.white))
-          html_text_view.setBackgroundColor(ContextCompat.getColor(this,R.color.Black))
-          html_text_view.quoteSpanStripColor = ContextCompat.getColor(this,R.color.Blue)
-          html_text_view.setText("<h1>Hello World</h1>")
-
-        Java
-            htmlview html_text_view=findViewById(R.id.html);
-            html_text_view.setQuoteSpanBackGroundColor(ContextCompat.getColor(this,R.color.Black));
-            html_text_view.setQuoteSpanStripColor(ContextCompat.getColor(this,R.color.blue));
-            html_text_view.setQuoteSpanStripWidth(10F);
-            html_text_view.setQuoteSpanGap(30F);
-            html_text_view.setText("<h1>Hello World</h1>");
-
+        
 
     -Image Click Listener
 
         Kotlin
 
-     	    html_text_view.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
+     	    binding.htmlTextView.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
             override fun imageClicked(url: String?) {
                 Log.d("TAG", "imageClicked: $url")
                 }
