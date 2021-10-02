@@ -55,7 +55,7 @@
 
          Java
 
-            html_text_view.setOnViewTouchedListener(new htmlview.OnViewTouchedListener() {
+            binding.htmlTextView.setOnViewTouchedListener(new htmlview.OnViewTouchedListener() {
                         @Override
                         public void imageClicked(String s) {
                             Log.d("TAG", "imageClicked: Url is " +s);
