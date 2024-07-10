@@ -11,7 +11,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 
-class htmlview @JvmOverloads constructor(
+class HtmlView @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0

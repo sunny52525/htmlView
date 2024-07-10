@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.shaun.htmlviewsunny.htmlview
+import com.shaun.htmlviewsunny.HtmlView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         html_text_view.setText(htmlString().html)
 
 
-        html_text_view.setOnViewTouchedListener(object : htmlview.OnViewTouchedListener {
+        html_text_view.setOnViewTouchedListener(object : HtmlView.OnViewTouchedListener {
             override fun imageClicked(url: String?) {
                 Log.d("TAG", "imageClicked: $url")
             }
