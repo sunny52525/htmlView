@@ -9,12 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<com.shaun.htmlviewsunny.htmlview
+<com.shaun.htmlviewsunny.HtmlView
     android:id="@+id/html_text_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</com.shaun.htmlviewsunny.htmlview>
+</com.shaun.htmlviewsunny.HtmlView>
 
     </ScrollView>
 
